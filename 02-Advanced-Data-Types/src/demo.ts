@@ -42,8 +42,8 @@ type Age = number;
 const myAge: Age = 30; // Valid assignment
 
 //Object Type Alias
-type User = { id: number, name: string};
-const user: User = { id: 1, name: "Ivan Ivanov" }; // Valid assignment
+type User1 = { id: number, name: string};
+const user: User1 = { id: 1, name: "Ivan Ivanov" }; // Valid assignment
 
 //Aliasing doesn’t actually create a new type - it creates a new name to refer to that type. A type cannot be re-opened to add new properties 
 
