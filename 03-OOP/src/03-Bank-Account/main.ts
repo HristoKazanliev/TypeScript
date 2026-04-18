@@ -43,7 +43,6 @@ function createAccount(arrInnput: string[]) {
     }
 }
 
-createAccount(['Create', 'Deposit 1 20', 'GetInterest 1 10', 'End']);
+//createAccount(['Create', 'Deposit 1 20', 'GetInterest 1 10', 'End']);
 createAccount(['Create', 'Create', 'Deposit 1 20', 'Deposit 3 20', 'Deposit 2 10', 'SetInterest 1.5',
-'GetInterest 1 1', 'GetInterest 2 1', 'GetInterest 3 1', 'End'
-]);
+'GetInterest 1 1', 'GetInterest 2 1', 'GetInterest 3 1', 'End']);
