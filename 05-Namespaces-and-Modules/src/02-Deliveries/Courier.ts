@@ -12,7 +12,7 @@ export class Courier implements FoodAndBeverages.Delivery {
         this.placesToVisit = placesToVisit;
     }
 
-    newCustomer(customerName: string, visited: boolean): string {
+    newCustomer(customerName: string, visited: boolean = false): string {
         const matchCustomer = this.placesToVisit.find((person: PlaceToVisit) => person.customerName === customerName);
 
         if (matchCustomer) {
@@ -24,10 +24,23 @@ export class Courier implements FoodAndBeverages.Delivery {
     }
 
     visitCustomer(customerName: string): string {
-        throw new Error("Method not implemented.");
+        const matchCustomer = this.placesToVisit.find((person: PlaceToVisit) => person.customerName === customerName);
+
+        if (matchCustomer) {
+            matchCustomer.visited = true;
+            return `${customerName} visited!`;
+        } else {
+            throw new Error(`${customerName} is not your customer`);
+        }
     }
 
     showCustomers(): string {
-        throw new Error("Method not implemented.");
+        let result: string = '';
+
+        this.placesToVisit.forEach((customer) => {
+            result += `${customer.customerName} -> ${customer.visited}\n`
+        });
+
+        return result;
     }
 }
